@@ -1,16 +1,18 @@
 import Button from "@/components/button"
-import { Box, Text } from "@chakra-ui/react"
+import { Box, ChakraProvider, Text } from "@chakra-ui/react"
 
 export default function Home() {
   return (
-    <main>
-      <Box justifyItems={'center'}>
-          <Text className='md:text-4xl mt-60 text-center'>Welcome to Droners Inc. Incoincing App</Text>
+    <ChakraProvider>
+      <div>
+        <Box justifyItems={'center'}>
+            <Text className='md:text-4xl mt-72 text-center text-white'>Welcome to Droners Inc. Incoincing App</Text>
 
-          <Box className="mt-4 ">
-            <Button fileUrl="/login" text={"Click to Login"} />
-          </Box>
-      </Box>
-    </main>
+            <Box mx={430} className="mt-4">
+              <Button location="/login" text={"Click to Login"} />
+            </Box>
+        </Box>
+      </div>
+    </ChakraProvider>
   )
 }
