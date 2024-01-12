@@ -1,15 +1,16 @@
 import Button from "@/components/button"
+import { Box, Text } from "@chakra-ui/react"
 
 export default function Home() {
   return (
     <main>
-      <div>
-          <h1 className='md:text-4xl mt-60 text-center'>Welcome to Droners Inc. Incoincing App</h1>
+      <Box justifyItems={'center'}>
+          <Text className='md:text-4xl mt-60 text-center'>Welcome to Droners Inc. Incoincing App</Text>
 
-          <div className="mt-4 mx-[120px] md:mx-[380px] lg:mx-[660px]">
+          <Box className="mt-4 ">
             <Button fileUrl="/login" text={"Click to Login"} />
-          </div>
-      </div>
+          </Box>
+      </Box>
     </main>
   )
 }
