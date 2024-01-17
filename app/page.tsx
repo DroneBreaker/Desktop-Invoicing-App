@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <ChakraProvider>
       <div>
-        <Box justifyItems={'center'}>
-            <Text className='md:text-4xl mt-72 text-center text-white'>Welcome to Droners Inc. Incoincing App</Text>
+        <Box mx={'auto'}>
+            <Text className='md:text-4xl mt-72 md:mx-[120px] lg:mx-[440px] text-white'>Welcome to Droners Inc. Incoincing App</Text>
 
-            <Box mx={430} className="mt-4">
+            <Box className="mt-4 md:mx-[360px] lg:mx-[660px]">
               <Button location="/login" text={"Click to Login"} />
             </Box>
         </Box>

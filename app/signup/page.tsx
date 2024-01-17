@@ -10,26 +10,31 @@ export default function Register({title, location} : ButtonProps) {
   return (
     <ChakraProvider>
         <Box>
-            <Box className='rounded-lg lg:h-[72px]' my={38} mx={'auto'} bg={'white'} h={570} w={460}>
+            <Box className='rounded-lg lg:h-[72px]' my={18} mx={'auto'} bg={'white'} h={630} w={460}>
                 <Avatar size={'2xl'} className='mx-44'/>
-                <Text className='text-black mt-4 text-center text-xl'>Login</Text>
+                <Text className='text-black mt-4 text-center text-xl'>Registration</Text>
 
                 <FormControl mx={4} mt={6}>
                     <FormLabel>Business TIN</FormLabel>
-                    <Input placeholder='Business TIN' htmlSize={4} width={430} mb={4} />
+                    <Input htmlSize={4} width={430} mb={4} />
                 </FormControl>
 
                 <FormControl mx={4}>
-                    <FormLabel>Username</FormLabel>
-                    <Input placeholder='Username' htmlSize={4} width={430} mb={4} />
+                    <FormLabel>PIN</FormLabel>
+                    <Input placeholder='Enter 6 digits pin code' htmlSize={4} width={430} mb={4} />
                 </FormControl>
 
                 <FormControl mx={4}>
-                    <FormLabel>Password</FormLabel>
-                    <Input placeholder='Password' htmlSize={4} width={430} mb={4} />
+                    <FormLabel>Business Name</FormLabel>
+                    <Input disabled bg={'gray'} htmlSize={4} width={430} mb={4} />
                 </FormControl>
 
-                <HStack justify={'space-between'} mb={2}>
+                <FormControl mx={4}>
+                    <FormLabel>Full Name</FormLabel>
+                    <Input disabled bg={'gray'}  htmlSize={4} width={430} mb={4} />
+                </FormControl>
+
+                {/* <HStack justify={'space-between'} mb={2}>
                     <Box mx={4}>
                         <Checkbox className='text-sm'>Remember My Login</Checkbox>
 
@@ -38,11 +43,11 @@ export default function Register({title, location} : ButtonProps) {
                     <Box>
                         <Text className='text-sm mr-4 text-blue-500'><a href='/'>Fogot Password?</a></Text>
                     </Box>
-                </HStack>
+                </HStack> */}
 
-                <Button mx={4} w={'94%'} mb={2}><a href='/'>Login</a></Button>
+                <Button justifyItems={'flex-end'} mx={4} mb={2}><a href='/'>Next</a></Button>
 
-                <Text className='text-center text-blue-500'><a href='/signup'>Register new company?</a></Text>
+                <Text className='text-center text-blue-500'><a href='/login'>Already have an Acoount? Click to Login</a></Text>
             </Box>
         </Box>
     </ChakraProvider>
